@@ -1,0 +1,296 @@
+﻿<Window x:Class="TetrisClient.MultiplayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:TetrisClient"
+        mc:Ignorable="d"
+        Title="MultiplayerWindow" Height="480" Width="1000">
+    <Canvas Background="Black">
+        <Border
+            BorderBrush="White"
+            BorderThickness="4"
+            Canvas.Left="10"
+            Canvas.Top="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <Grid Background="Black" x:Name="TetrisGridP1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+        <Border
+            BorderBrush="White"
+            BorderThickness="4"
+            Canvas.Right="10"
+            Canvas.Top="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" Canvas.Left="299">
+            <Grid Background="Black" x:Name="nextBlockP1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="150"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="LevelTitleP1" HorizontalAlignment="Left" Canvas.Left="273" VerticalAlignment="Center">
+            Level
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="150"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="LevelValueP1" HorizontalAlignment="Left" Canvas.Left="396" VerticalAlignment="Center">
+            1
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="190"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="LinesTitleP1" HorizontalAlignment="Left" Canvas.Left="273" VerticalAlignment="Center">
+            Lines
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="190"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="LinesValueP1" HorizontalAlignment="Left" Canvas.Left="396" VerticalAlignment="Center">
+            0
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="230"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="ScoreTitleP1" HorizontalAlignment="Left" Canvas.Left="273" VerticalAlignment="Center">
+            Score
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="230"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            Name="ScoreValueP1" HorizontalAlignment="Left" Canvas.Left="396" VerticalAlignment="Center">
+            0
+        </Label>
+
+        <Button x:Name="ReadyButton" Content="Invoke ReadyUp message" Click="StartGame_OnClick" Canvas.Left="380" Canvas.Top="338"/>
+
+        <Label
+            x:Name="GameOverP1"
+            Height="50"
+            FontWeight="Bold"
+            FontSize="38"
+            FontFamily="Leelawadee"
+            Width="230" Canvas.Left="24" Canvas.Top="179" Panel.ZIndex="1"
+            Foreground="Lime" HorizontalAlignment="Center" VerticalAlignment="Center"
+            Visibility="Hidden"
+            >
+            GAME OVER
+        </Label>
+        
+        <Label
+            x:Name="GameWonP2"
+            Height="50"
+            FontWeight="Bold"
+            FontSize="38"
+            FontFamily="Leelawadee"
+            Width="230" Canvas.Left="646" Canvas.Top="179" Panel.ZIndex="1"
+            Visibility="Hidden"
+            Foreground="Lime" HorizontalAlignment="Center" VerticalAlignment="Center"
+        >
+            GAME WON
+        </Label>
+        <Label
+            x:Name="GameOverP2"
+            Height="50"
+            FontWeight="Bold"
+            FontSize="38"
+            FontFamily="Leelawadee"
+            Width="230" Canvas.Left="646" Canvas.Top="179" Panel.ZIndex="1"
+            Foreground="Lime" HorizontalAlignment="Left" VerticalAlignment="Center"
+            Visibility="Hidden"
+            >
+            GAME OVER
+        </Label>
+        
+        <Label
+            x:Name="GameWonP1"
+            Height="50"
+            FontWeight="Bold"
+            FontSize="38"
+            FontFamily="Leelawadee"
+            Width="230" Canvas.Left="24" Canvas.Top="179" Panel.ZIndex="1"
+            Foreground="Lime" HorizontalAlignment="Center" VerticalAlignment="Center"
+            Visibility="Hidden"
+        >
+            GAME WON
+        </Label>
+
+        <Border
+            BorderBrush="White"
+            BorderThickness="4"
+            Canvas.Left="632"
+            Canvas.Top="16"
+            HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid Background="Black" x:Name="TetrisGridP2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="150"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="LevelTitleP2" Canvas.Left="563" Content="Level" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="150"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="LevelValueP2" Canvas.Left="481" Content="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="190"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="LinesTitleP2" Canvas.Left="563" Content="Lines" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="190"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="LinesValueP2" Canvas.Left="481" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label
+            Background="Transparent"
+            Canvas.Right="100"
+            Canvas.Top="230"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="ScoreTitleP2" Canvas.Left="558" Content="Score" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label
+            Background="Transparent"
+            Canvas.Right="10"
+            Canvas.Top="230"
+            FontFamily="Leelawadee"
+            FontSize="24"
+            Foreground="White"
+            x:Name="ScoreValueP2" Canvas.Left="481" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Border
+            BorderBrush="White"
+            BorderThickness="4"
+            Canvas.Right="10"
+            Canvas.Top="10"
+            Canvas.Left="481" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Grid Background="Black" x:Name="nextBlockP2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+
+    </Canvas>
+</Window>

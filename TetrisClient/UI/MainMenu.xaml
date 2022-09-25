@@ -1,0 +1,64 @@
+﻿<Window
+    Height="450"
+    Title="Main Menu"
+    Width="800"
+    mc:Ignorable="d"
+    x:Class="TetrisClient.UI.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Canvas Background="Black">
+        <Label
+            Background="Transparent"
+            Canvas.Left="218"
+            FontFamily="Leelawadee"
+            FontSize="144"
+            Foreground="White"
+            Height="216"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="center"
+            MouseLeftButtonDown="easterEgg"
+            VerticalAlignment="Center"
+            Width="364">
+            Tetris
+        </Label>
+        <Label
+            Background="Transparent"
+            Canvas.Left="284"
+            Canvas.Top="209"
+            Content="Singleplayer"
+            FontFamily="Leelawadee"
+            FontSize="36"
+            Foreground="White"
+            Height="72"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="center"
+            MouseLeftButtonDown="singlePlayer"
+            VerticalAlignment="Center"
+            Width="232" />
+        <Label
+            Background="Transparent"
+            Canvas.Left="284"
+            Canvas.Top="281"
+            Content="Multiplayer"
+            FontFamily="Leelawadee"
+            FontSize="36"
+            Foreground="White"
+            Height="72"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="center"
+            MouseLeftButtonDown="multiplayer"
+            VerticalAlignment="Center"
+            Width="232" />
+        <Image
+            Canvas.Left="214"
+            Canvas.Top="180"
+            Height="219"
+            Source="/UI/img/slenderAyoub.png"
+            Stretch="Fill"
+            Visibility="Hidden"
+            Width="368"
+            x:Name="ayoubSlender" />
+    </Canvas>
+</Window>
