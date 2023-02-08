@@ -2,9 +2,9 @@
 
 The assignment is to recreate tetris in c# .net.
 
-![](https://github.com/Ayoub2K/Tetris-Multiplayer/tetris.gif)
+![tetris](https://user-images.githubusercontent.com/38209147/217528851-a5d7121d-f163-48f4-8aa3-f0ac822ea5cf.gif)
 
-#The team
+# The team
 
 this assignment could be carried out by a maximum of two persons per group. This repo belongs to Jasper and Ayoub.
 
