@@ -12,4 +12,4 @@ Jasper (@Piratepie)
 
 Ayoub (me) (@Ayoub2K)
 
-copy from HU organization since forking was not possible
+copy from [HU organization](https://github.com/huict/practicum-5-v2-sir-this-is-a-wendy-s) since forking was not possible
