@@ -10,6 +10,6 @@ this assignment could be carried out by a maximum of two persons per group. This
 
 Jasper [@Piratepie](https://github.com/Piratepie)
 
-Ayoub [@Ayoub2K]https://github.com/Ayoub2K
+Ayoub [@Ayoub2K](https://github.com/Ayoub2K)
 
 copy from [HU organization](https://github.com/huict/practicum-5-v2-sir-this-is-a-wendy-s) since forking was not possible
