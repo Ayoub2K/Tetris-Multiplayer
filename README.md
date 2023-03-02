@@ -8,8 +8,8 @@ The assignment is to recreate tetris in c# .net.
 
 this assignment could be carried out by a maximum of two persons per group. This repo belongs to Jasper and Ayoub.
 
-Jasper (@Piratepie)
+Jasper [@Piratepie](https://github.com/Piratepie)
 
-Ayoub (me) (@Ayoub2K)
+Ayoub [@Ayoub2K]https://github.com/Ayoub2K
 
 copy from [HU organization](https://github.com/huict/practicum-5-v2-sir-this-is-a-wendy-s) since forking was not possible
